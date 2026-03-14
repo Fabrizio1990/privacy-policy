@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Talk to Post</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #111;
+        }
+
+        .last-updated {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #222;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 6px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin: 8px 0 12px 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        ul ul {
+            margin-top: 6px;
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #111;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy — Talk to Post</h1>
+        <p class="last-updated"><strong>Last updated:</strong> March 2026</p>
+
+        <h2>Overview</h2>
+        <p>Talk to Post is an Android application that helps users transform personal notes and journal entries into social media posts using artificial intelligence. The app prioritizes user privacy by offering on-device AI processing alongside optional cloud-based AI services.</p>
+
+        <h2>Data Collection and Processing</h2>
+
+        <h3>Data Stored Locally</h3>
+        <p>All user-generated content is stored <strong>exclusively on your device</strong> using local storage (AsyncStorage). This includes:</p>
+        <ul>
+            <li>Journal entries and notes</li>
+            <li>Generated social media posts</li>
+            <li>App settings and preferences</li>
+            <li>Downloaded AI models</li>
+        </ul>
+        <p><strong>We do not collect, transmit, or store any of this data on external servers.</strong></p>
+
+        <h3>On-Device AI Processing</h3>
+        <ul>
+            <li>AI text generation is processed locally using on-device models (llama.cpp/Qwen) and <strong>never leaves your device</strong></li>
+            <li>No data is sent to external servers when using on-device models</li>
+        </ul>
+
+        <h3>Cloud AI Processing (Optional)</h3>
+        <ul>
+            <li>When using Google Gemini API (cloud provider), your text input is sent to Google's servers for processing</li>
+            <li>This is <strong>opt-in only</strong> and requires you to provide your own API key</li>
+            <li>Your API key is stored securely on your device using encrypted storage</li>
+            <li>Google's privacy policy applies to data processed through their API: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        </ul>
+        <p><strong>You can avoid any cloud data transmission by using only on-device AI models.</strong></p>
+
+        <h3>Audio Recording (Whisper Transcription)</h3>
+        <ul>
+            <li>The app requests microphone access for voice-to-text transcription</li>
+            <li>Audio is processed <strong>entirely on-device</strong> using the Whisper model</li>
+            <li>Audio recordings are temporary and deleted after transcription</li>
+            <li>No audio data is sent to external servers</li>
+        </ul>
+
+        <h3>Images and Documents</h3>
+        <ul>
+            <li>When attaching images or documents (PDF, TXT, CSV), files are processed locally on your device</li>
+            <li>If using Google Gemini API, image/document content may be sent to Google for processing</li>
+            <li>No files are uploaded to our servers</li>
+        </ul>
+
+        <h3>Device Information</h3>
+        <ul>
+            <li>The app reads device RAM and storage capacity to determine compatible AI models</li>
+            <li>This information is used locally only and is never transmitted</li>
+        </ul>
+
+        <h3>Network Access</h3>
+        <ul>
+            <li>Internet access is used for:
+                <ul>
+                    <li>Downloading AI models (one-time, from GitHub repositories)</li>
+                    <li>Fetching the model catalog (periodically, from GitHub)</li>
+                    <li>Cloud AI API calls (only when cloud provider is configured)</li>
+                </ul>
+            </li>
+            <li>No analytics, tracking, or telemetry data is collected or transmitted</li>
+        </ul>
+
+        <h2>Data We Do NOT Collect</h2>
+        <ul>
+            <li>Personal information (name, email, phone number)</li>
+            <li>Location data</li>
+            <li>Device identifiers or advertising IDs</li>
+            <li>Usage analytics or telemetry</li>
+            <li>Crash reports</li>
+            <li>Browsing history</li>
+            <li>Contact lists</li>
+        </ul>
+
+        <h2>Data Storage</h2>
+        <ul>
+            <li>All app data (journals, posts, settings) is stored locally on your device</li>
+            <li>Data can be cleared by uninstalling the app or clearing app data in Android settings</li>
+            <li>AI model files are stored in the app's private directory</li>
+        </ul>
+
+        <h2>Cross-App Model Sharing</h2>
+        <ul>
+            <li>If you have multiple apps from the Local AI family installed, they may share downloaded AI model files with each other to avoid redundant downloads</li>
+            <li>This sharing happens entirely on-device via Android's ContentProvider mechanism</li>
+            <li>Only AI model files are shared, never user data or content</li>
+            <li>No data leaves your device during this process</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>The app does not integrate any:</p>
+        <ul>
+            <li>Analytics services</li>
+            <li>Advertising networks</li>
+            <li>Crash reporting services</li>
+            <li>Social media SDKs</li>
+        </ul>
+        <p>The only optional third-party service is <strong>Google Gemini API</strong>, activated only if you explicitly configure it with your own API key.</p>
+
+        <h2>Data Retention</h2>
+        <ul>
+            <li>All data is stored locally and retained until you delete it</li>
+            <li>You can delete individual journals, notes, or posts within the app</li>
+            <li>Uninstalling the app removes all associated data</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>This app is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date above.</p>
+
+        <h2>Contact</h2>
+        <p>For questions about this privacy policy, please open an issue on the project's GitHub repository.</p>
+    </div>
+</body>
+</html>
